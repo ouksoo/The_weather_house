@@ -8,7 +8,11 @@ theWeatherHouse = {
                 //movie
                 $(".scene-4").fadeIn(300, function() {
                     //logo and menu
-                    $(".scene-3").delay(1500).fadeIn(300);
+                    $(".scene-3").delay(1500).fadeIn(300, function(){
+                        var menuShow = setTimeout(function() {
+                            $('.scene-3, a.menu-open').addClass('active');
+                        }, 2000)
+                    });
                 });
 
                 //area 1 film
@@ -45,14 +49,16 @@ window.addEventListener('scroll', function() {
     const section7Top = area7.getBoundingClientRect().top;
     
     if (section1Top <= 0) {
-        
+
     } else {
-        theWeatherHouse.initial();
+
     }
     if (section2Top <= 0) {
         $('.section-2').css('display', 'block');
+        $('div.area-2 div.inner').addClass('on');
     } else {
         $('.section-2').css('display', 'none');
+        $('div.area-2 div.inner').removeClass('on');
     }
     if (section3Top <= 0) {
         $('.section-3').fadeIn();
