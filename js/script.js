@@ -34,17 +34,6 @@ theWeatherHouse = {
             $(this).toggleClass("active");
             answer.slideToggle(300);
         });
-        /*
-        $('ul.info-list a').each(function() {
-            $(this).on('click', function(e) {
-                e.preventDefault();
-                $('ul.info-list div.detail').removeClass('on');
-                $('ul.info-list a').removeClass('active');
-                $(this).addClass('active');
-                $(this).next().addClass('on');
-            });
-        });
-        */
     },
 }
 
