@@ -184,9 +184,10 @@ div.overlay div.area-1 div.inner-content div.book-now a {
 }
 .reserve-info .info-list li div.detail {
     display: none;
+    padding: 10px;
 }
 .reserve-info .info-list li div.detail.on {
-    display: block;
+    
 }
 div.overlay div.area-2 {
     height: 1500px;
@@ -226,21 +227,6 @@ div.film-area1 {
     left: 0; 
     z-index: 11;
 }
-a.menu-open {
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    top: 50px;
-    right: -10%;
-    z-index: 15;
-    background: url('../img/GNB_menu_btn.png') 50% 50% no-repeat;
-    text-indent: -9999px;
-}
-a.menu-open.active {
-    top: 50px;
-    right: 7%;
-    transition: all 1s;
-}
 
 /* art */
 div.scene-1 {
@@ -264,26 +250,6 @@ div.scene-2 {
     z-index: 10;
     transform: translate(-50%, -50%);
 }
-/* menu */
-div.scene-3 {
-    position: fixed;
-    width: 314px;
-    height: 22px;
-    background: url('../img/intro_main_logo_big.png') 0 50% no-repeat;
-    background-size: 100% auto;
-    top: 7%;
-    left: 50%;
-    z-index: 15;
-    margin: 0 0 0 -157px;
-}
-div.scene-3.active {
-    width: 189px;
-    height: 30px;
-    top: 50px;
-    left: 7%;
-    transition: all 1s;
-    margin: 0 0 0 0px;
-}
 /* movie */
 div.scene-4 {
     position: absolute;
@@ -304,4 +270,50 @@ div.scene-4 {
     height: auto;
     transform: translate(-50%, -50%);
     object-fit: cover;
+}
+
+/* global */
+div.film-area2 {
+    position: fixed;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    opacity: .55;
+    top: 0; 
+    left: 0; 
+    z-index: 11;
+}
+div.top-logo {
+    position: fixed;
+    width: 314px;
+    height: 22px;
+    background: url('../img/intro_main_logo_big.png') 0 50% no-repeat;
+    background-size: 100% auto;
+    top: 7%;
+    left: 50%;
+    z-index: 15;
+    margin: 0 0 0 -157px;
+}
+div.top-logo.active {
+    width: 189px;
+    height: 30px;
+    top: 50px;
+    left: 7%;
+    transition: all 1s;
+    margin: 0 0 0 0px;
+}
+a.menu-open {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    top: 50px;
+    right: -10%;
+    z-index: 15;
+    background: url('../img/GNB_menu_btn.png') 50% 50% no-repeat;
+    text-indent: -9999px;
+}
+a.menu-open.active {
+    top: 50px;
+    right: 7%;
+    transition: all 1s;
 }

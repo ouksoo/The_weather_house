@@ -8,9 +8,9 @@ theWeatherHouse = {
                 //movie
                 $(".scene-4").fadeIn(300, function() {
                     //logo and menu
-                    $(".scene-3").delay(1500).fadeIn(300, function(){
+                    $(".top-logo").delay(1500).fadeIn(300, function(){
                         var menuShow = setTimeout(function() {
-                            $('.scene-3, a.menu-open').addClass('active');
+                            $('.top-logo, a.menu-open').addClass('active');
                         }, 2000)
                     });
                 });
@@ -25,6 +25,16 @@ theWeatherHouse = {
         });
     },
     infoListShowHide: function() {
+        $(".question").click(function(e) {
+            e.preventDefault();
+            var answer = $(this).next(".detail");
+            $(".question").not(this).removeClass("active");
+            
+            $(".detail").not(answer).slideUp(300);
+            $(this).toggleClass("active");
+            answer.slideToggle(300);
+        });
+        /*
         $('ul.info-list a').each(function() {
             $(this).on('click', function(e) {
                 e.preventDefault();
@@ -34,6 +44,7 @@ theWeatherHouse = {
                 $(this).next().addClass('on');
             });
         });
+        */
     },
 }
 
@@ -68,9 +79,16 @@ window.addEventListener('scroll', function() {
     if (section2Top <= 0) {
         $('.section-2').css('display', 'block');
         $('div.area-2 div.inner').addClass('on');
+
+        $(".film-area2").fadeIn(500, function() {
+            
+        });
     } else {
         $('.section-2').css('display', 'none');
         $('div.area-2 div.inner').removeClass('on');
+        $(".film-area2").fadeOut(500, function() {
+            
+        });
     }
     if (section3Top <= 0) {
         $('.section-3').fadeIn();

@@ -1,97 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radar Chart with Round Grids</title>
-    <!-- ApexCharts CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <title>Q&A 슬라이드 (하나만 열리게)</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 30px auto;
         }
-        #chart-container {
-            width: 500px;
-            height: 500px;
+        .qa-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .question {
+            font-weight: bold;
+        }
+        .answer {
+            display: none;
+            padding: 10px;
+            background: #f9f9f9;
         }
     </style>
 </head>
 <body>
-    <div id="chart-container"></div>
+
+    <div class="qa-item">
+        <div class="question">Q. jQuery란 무엇인가요?</div>
+        <div class="answer">A. jQuery는 JavaScript 라이브러리로, DOM 조작을 쉽게 할 수 있도록 도와줍니다.</div>
+    </div>
+
+    <div class="qa-item">
+        <div class="question">Q. slideUp()과 slideDown()의 차이는?</div>
+        <div class="answer">A. slideUp()은 요소를 위로 숨기고, slideDown()은 요소를 아래로 펼쳐서 보여줍니다.</div>
+    </div>
+
+    <div class="qa-item">
+        <div class="question">Q. slideToggle()은 무엇인가요?</div>
+        <div class="answer">A. slideToggle()은 slideUp()과 slideDown()을 번갈아 실행하는 함수입니다.</div>
+    </div>
 
     <script>
-        var options = {
-            chart: {
-                type: 'radar',
-                height: 350
-            },
-            series: [{
-                name: 'Data',
-                data: [80, 70, 90, 85, 75]
-            }],
-            xaxis: {
-                categories: ['A', 'B', 'C', 'D', 'E'],
-                tickAmount: 5,  // 5개의 카테고리
-                labels: {
-                    show: true
-                }
-            },
-            radar: {
-                size: 130,  // 레이더 그리드 크기
-                polygons: {
-                    fill: true,  // 그리드에 채우기 색상
-                    fillOpacity: 0.1,  // 그리드 채우기 색상 투명도
-                    strokeColor: '#ddd',  // 그리드 선 색상
-                    strokeWidth: 1  // 그리드 선 두께
-                }
-            },
-            plotOptions: {
-                radar: {
-                    polygons: {
-                        fill: true,
-                        fillOpacity: 0.2,
-                        strokeColor: '#bbb',
-                        strokeWidth: 2,
-                    }
-                }
-            },
-            stroke: {
-                show: true,
-                width: 2,
-                colors: ['#64b6ff']
-            },
-            fill: {
-                colors: ['transparent']
-            },
-            markers: {
-                size: 4,
-                colors: ['#64b6ff'],
-                strokeColors: '#fff',
-                strokeWidth: 2,
-                hover: {
-                    size: 7
-                }
-            },
-            grid: {
-                show: true,
-                borderColor: '#333',
-                position: 'back',
-                padding: {
-                    left: 20,
-                    right: 20,
-                    top: 20,
-                    bottom: 20
-                }
-            }
-        };
+        $(document).ready(function() {
+            $(".question").click(function() {
+                // 클릭된 질문의 답변 요소 선택
+                var answer = $(this).next(".answer");
 
-        var chart = new ApexCharts(document.querySelector("#chart-container"), options);
-        chart.render();
+                // 모든 답변을 닫고, 현재 선택된 답변이 열려 있지 않다면 열기
+                $(".answer").not(answer).slideUp(300);
+                answer.slideToggle(300);
+            });
+        });
     </script>
+
 </body>
 </html>
