@@ -1,5 +1,5 @@
 theWeatherHouse = {
-    initial : function() {
+    initial: function() {
         //art
         $(".scene-1").fadeIn(1000).delay(2000).fadeOut(1000, function() {
             //logo first
@@ -23,13 +23,25 @@ theWeatherHouse = {
                 }, 3000);
             });
         });
-    }
+    },
+    infoListShowHide: function() {
+        $('ul.info-list a').each(function() {
+            $(this).on('click', function(e) {
+                e.preventDefault();
+                $('ul.info-list div.detail').removeClass('on');
+                $('ul.info-list a').removeClass('active');
+                $(this).addClass('active');
+                $(this).next().addClass('on');
+            });
+        });
+    },
 }
 
 
 $(document).ready(function() {
     //intro 
     theWeatherHouse.initial();
+    theWeatherHouse.infoListShowHide();
 });
 
 window.addEventListener('scroll', function() {

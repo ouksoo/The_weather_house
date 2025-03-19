@@ -1,61 +1,97 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>배경 영상 예제</title>
+    <title>Radar Chart with Round Grids</title>
+    <!-- ApexCharts CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <style>
-        * {
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
-            overflow: hidden;
-            position: relative;
         }
-
-        /* 배경 비디오 스타일 */
-        #bg-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-        }
-
-        /* 콘텐츠 스타일 */
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-            text-align: center;
+        #chart-container {
+            width: 500px;
+            height: 500px;
         }
     </style>
 </head>
 <body>
-    <video id="bg-video" autoplay muted loop>
-        <source src="img/intro.mp4" type="video/mp4">
-        <!-- 다른 포맷 지원 -->
-        <source src="img/intro.webm" type="video/webm">
-        <source src="img/intro.ogv" type="video/ogg">
-        브라우저가 비디오 태그를 지원하지 않습니다.
-    </video>
+    <div id="chart-container"></div>
 
-    <div class="content">
-        배경 영상 예제
-    </div>
+    <script>
+        var options = {
+            chart: {
+                type: 'radar',
+                height: 350
+            },
+            series: [{
+                name: 'Data',
+                data: [80, 70, 90, 85, 75]
+            }],
+            xaxis: {
+                categories: ['A', 'B', 'C', 'D', 'E'],
+                tickAmount: 5,  // 5개의 카테고리
+                labels: {
+                    show: true
+                }
+            },
+            radar: {
+                size: 130,  // 레이더 그리드 크기
+                polygons: {
+                    fill: true,  // 그리드에 채우기 색상
+                    fillOpacity: 0.1,  // 그리드 채우기 색상 투명도
+                    strokeColor: '#ddd',  // 그리드 선 색상
+                    strokeWidth: 1  // 그리드 선 두께
+                }
+            },
+            plotOptions: {
+                radar: {
+                    polygons: {
+                        fill: true,
+                        fillOpacity: 0.2,
+                        strokeColor: '#bbb',
+                        strokeWidth: 2,
+                    }
+                }
+            },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['#64b6ff']
+            },
+            fill: {
+                colors: ['transparent']
+            },
+            markers: {
+                size: 4,
+                colors: ['#64b6ff'],
+                strokeColors: '#fff',
+                strokeWidth: 2,
+                hover: {
+                    size: 7
+                }
+            },
+            grid: {
+                show: true,
+                borderColor: '#333',
+                position: 'back',
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart-container"), options);
+        chart.render();
+    </script>
 </body>
 </html>
