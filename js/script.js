@@ -91,28 +91,28 @@ window.addEventListener('scroll', function() {
         });
     }
     if (section3Top <= 0) {
-        $('.section-3').fadeIn();
+        $('.section-3').fadeIn(500);
     } else {
-        $('.section-3').fadeOut();
+        $('.section-3').fadeOut(500);
     }
     if (section4Top <= 0) {
-        $('.section-4').fadeIn();
+        $('.section-4').fadeIn(500);
     } else {
-        $('.section-4').fadeOut();
+        $('.section-4').fadeOut(500);
     }
     if (section5Top <= 0) {
-        $('.section-5').fadeIn();
+        $('.section-5').fadeIn(500);
     } else {
-        $('.section-5').fadeOut();
+        $('.section-5').fadeOut(500);
     }
     if (section6Top <= 0) {
-        $('.section-6').fadeIn();
+        $('.section-6').fadeIn(500);
     } else {
-        $('.section-6').fadeOut();
+        $('.section-6').fadeOut(500);
     }
     if (section7Top <= 0) {
-        $('.section-7').fadeIn();
+        $('.section-7').fadeIn(500);
     } else {
-        $('.section-7').fadeOut();
+        $('.section-7').fadeOut(500);
     }
 });
