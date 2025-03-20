@@ -35,6 +35,16 @@ theWeatherHouse = {
             answer.slideToggle(300);
         });
     },
+    gnbMenuSlideBtn: function() {
+        $('a.menu-open').on('click', function(e) {
+            e.preventDefault();
+            $('div.gnb-wrapper').addClass('on');
+        });
+        $('a.menu-close').on('click', function(e) {
+            e.preventDefault();
+            $('div.gnb-wrapper').removeClass('on');           
+        });
+    },
 }
 
 
@@ -42,6 +52,7 @@ $(document).ready(function() {
     //intro 
     theWeatherHouse.initial();
     theWeatherHouse.infoListShowHide();
+    theWeatherHouse.gnbMenuSlideBtn();
 });
 
 window.addEventListener('scroll', function() {
