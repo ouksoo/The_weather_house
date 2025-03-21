@@ -45,6 +45,7 @@ theWeatherHouse = {
             $('div.gnb-wrapper').removeClass('on');           
         });
     },
+    isFilmShow : false,
 }
 
 
@@ -80,15 +81,11 @@ window.addEventListener('scroll', function() {
         $('.section-2').css('display', 'block');
         $('div.area-2 div.inner').addClass('on');
 
-        $(".film-area2").fadeIn(500, function() {
-            
-        });
+        $(".film-area2").fadeIn(500);
     } else {
         $('.section-2').css('display', 'none');
         $('div.area-2 div.inner').removeClass('on');
-        $(".film-area2").fadeOut(500, function() {
-            
-        });
+        $(".film-area2").fadeOut(500);
     }
     if (section3Top <= 0) {
         $('.section-3').fadeIn(500);

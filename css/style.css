@@ -132,13 +132,15 @@ div.overlay {
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 11;
 }
 div.overlay div.areas {
     width: 100%;
     text-align: center;
     border-bottom: 1px solid #000;
 }
+
+/* area 1 */
 div.overlay div.area-1 {
     position: relative;
 }
@@ -189,10 +191,13 @@ div.overlay div.area-1 div.inner-content div.book-now a {
 .reserve-info .info-list li div.detail.on {
     
 }
+
+/* area 2 */
 div.overlay div.area-2 {
-    height: 1500px;
+    
 }
 div.overlay div.area-2 div.inner {
+    position: relative;
     background: url('../img/main_img_1.png') 0 0 no-repeat;
     background-size: cover;
     width: 100%;
@@ -201,18 +206,191 @@ div.overlay div.area-2 div.inner {
 div.overlay div.area-2 div.inner.on {
     background: none;
 }
+div.overlay div.area-2 div.inner span {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: #fff;
+}
+div.overlay div.area-2 div.inner-content {
+    padding: 80vh 30px;
+    color: #fff;
+    z-index: 20;
+    text-align: left;
+}
+div.overlay div.area-2 div.inner-content .sentence {
+
+}
+div.overlay div.area-2 div.inner-content div.more-now {
+
+}
+div.overlay div.area-2 div.inner-content div.more-now a {
+    display: inline-block;
+    color: #fff;
+    padding: 20px 70px 20px 0;
+    background: url('../img/arrow.png') 90% 55% no-repeat;
+    margin: 60px 0;
+}
+
+/* area 3 */
 div.overlay div.area-3 {
-    height: 1000px;
+
 }
+div.overlay div.area-3 div.inner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+div.overlay div.area-3 div.inner.on {
+    background: none;
+}
+div.overlay div.area-3 div.inner span {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: #fff;
+}
+div.overlay div.area-3 div.inner-content {
+    padding: 80vh 30px;
+    color: #fff;
+    z-index: 20;
+    text-align: left;
+}
+div.overlay div.area-3 div.inner-content .sentence {
+
+}
+div.overlay div.area-3 div.inner-content div.more-now {
+
+}
+div.overlay div.area-3 div.inner-content div.more-now a {
+    display: inline-block;
+    color: #fff;
+    padding: 20px 70px 20px 0;
+    background: url('../img/arrow.png') 90% 55% no-repeat;
+    margin: 60px 0;
+}
+
+/* area 4 */
 div.overlay div.area-4 {
-    height: 1400px;
+    
 }
+div.overlay div.area-4 div.inner {
+    position: relative;
+    background: url('../img/logo_symbol.png') 50% 50% no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+div.overlay div.area-4 div.inner.on {
+    background: none;
+}
+div.overlay div.area-4 div.inner span {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: #fff;
+}
+div.overlay div.area-4 div.inner-content {
+    padding: 80vh 30px;
+    color: #fff;
+    z-index: 20;
+    text-align: left;
+}
+div.overlay div.area-4 div.inner-content .sentence {
+
+}
+div.overlay div.area-4 div.inner-content div.more-now {
+
+}
+div.overlay div.area-4 div.inner-content div.more-now a {
+    display: inline-block;
+    color: #fff;
+    padding: 20px 70px 20px 0;
+    background: url('../img/arrow.png') 90% 55% no-repeat;
+    margin: 60px 0;
+}
+
+/* area 5 */
 div.overlay div.area-5 {
-    height: 1200px;
+    
 }
+div.overlay div.area-5 div.inner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+div.overlay div.area-5 div.inner.on {
+    background: none;
+}
+div.overlay div.area-5 div.inner span {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: #fff;
+}
+div.overlay div.area-5 div.inner-content {
+    padding: 80vh 30px;
+    color: #fff;
+    z-index: 20;
+    text-align: left;
+}
+div.overlay div.area-5 div.inner-content .sentence {
+
+}
+div.overlay div.area-5 div.inner-content div.more-now {
+
+}
+div.overlay div.area-5 div.inner-content div.more-now a {
+    display: inline-block;
+    color: #fff;
+    padding: 20px 70px 20px 0;
+    background: url('../img/arrow.png') 90% 55% no-repeat;
+    margin: 60px 0;
+}
+
+/* area 6 */
 div.overlay div.area-6 {
-    height: 1300px;
+    
 }
+div.overlay div.area-5 div.inner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+div.overlay div.area-5 div.inner.on {
+    background: none;
+}
+div.overlay div.area-5 div.inner span {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: #fff;
+}
+div.overlay div.area-5 div.inner-content {
+    padding: 80vh 30px;
+    color: #fff;
+    z-index: 20;
+    text-align: left;
+}
+div.overlay div.area-5 div.inner-content .sentence {
+
+}
+div.overlay div.area-5 div.inner-content div.more-now {
+
+}
+div.overlay div.area-5 div.inner-content div.more-now a {
+    display: inline-block;
+    color: #fff;
+    padding: 20px 70px 20px 0;
+    background: url('../img/arrow.png') 90% 55% no-repeat;
+    margin: 60px 0;
+}
+
+/* area 7 */
 div.overlay div.area-7 {
     height: 1600px;
 }
