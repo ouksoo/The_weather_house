@@ -45,15 +45,88 @@ theWeatherHouse = {
             $('div.gnb-wrapper').removeClass('on');           
         });
     },
+    moreBtnClick: function() {
+        $('.more-now a').on('click', function(e) {
+            e.preventDefault();
+            let thisNum = $(this).data('num');
+            $('div.content-detail-' + thisNum).fadeIn(500);
+            $('body').css('overflow', 'hidden');
+
+            if(thisNum == 1) {
+                var contentDiv1 = new Swiper("#contentSwiper1", {
+                    spaceBetween: 30,
+                    effect: "fade",
+                    autoplay: {
+                      delay: 3500,
+                    },
+                });
+            }
+            else if(thisNum == 2) {
+                var contentDiv2 = new Swiper("#contentSwiper2", {
+                    spaceBetween: 30,
+                    effect: "fade",
+                    autoplay: {
+                      delay: 3500,
+                    },
+                });
+            }
+            else if(thisNum == 3) {
+                var contentDiv3 = new Swiper("#contentSwiper3", {
+                    spaceBetween: 30,
+                    effect: "fade",
+                    autoplay: {
+                      delay: 3500,
+                    },
+                });
+            }
+            else if(thisNum == 4) {
+                var contentDiv4 = new Swiper("#contentSwiper4", {
+                    spaceBetween: 30,
+                    effect: "fade",
+                    autoplay: {
+                      delay: 3500,
+                    },
+                });
+            }
+            else if(thisNum == 5) {
+                var contentDiv4 = new Swiper("#contentSwiper5", {
+                    spaceBetween: 30,
+                    effect: "fade",
+                    autoplay: {
+                      delay: 3500,
+                    },
+                });
+            }
+            theWeatherHouse.goBackClick();
+        });
+    },
+    goBackClick: function() {
+        $('.go-back').on('click', function(e) {
+            e.preventDefault();
+            $('div.subcontent').fadeOut(500);
+            theWeatherHouse.goBackClick();
+            $('body').css('overflow', 'auto');
+
+            contentDiv1.destroy();
+            contentDiv2.destroy();
+            contentDiv3.destroy();
+            contentDiv4.destroy();
+            contentDiv5.destroy();
+        });        
+    },
     isFilmShow : false,
 }
 
+function goToSlide(index) {
+    swiper.slideToLoop(index);  // loop 모드일 때 사용
+}
 
 $(document).ready(function() {
     //intro 
     theWeatherHouse.initial();
     theWeatherHouse.infoListShowHide();
     theWeatherHouse.gnbMenuSlideBtn();
+    theWeatherHouse.moreBtnClick();
 });
 
 window.addEventListener('scroll', function() {
@@ -80,32 +153,49 @@ window.addEventListener('scroll', function() {
     if (section2Top <= 0) {
         $('.section-2').css('display', 'block');
         $('div.area-2 div.inner').addClass('on');
-
-        $(".film-area2").fadeIn(500);
+        $(".film-area2").fadeIn(800);
+        /*
+        if(theWeatherHouse.isFilmShow == false) {
+            $(".film-area2").fadeIn(500);
+            theWeatherHouse.isFilmShow = true;
+        }
+        */
     } else {
         $('.section-2').css('display', 'none');
         $('div.area-2 div.inner').removeClass('on');
         $(".film-area2").fadeOut(500);
     }
     if (section3Top <= 0) {
-        $('.section-3').fadeIn(500);
+        $('.section-3').fadeIn(800, function() {
+            $(".film-area3").fadeIn(800);
+        });
     } else {
         $('.section-3').fadeOut(500);
+        $(".film-area3").fadeOut(500);
     }
     if (section4Top <= 0) {
-        $('.section-4').fadeIn(500);
+        $('.section-4').fadeIn(800, function(){
+            $(".film-area4").fadeIn(800);
+        });
     } else {
         $('.section-4').fadeOut(500);
+        $(".film-area4").fadeOut(500);
     }
     if (section5Top <= 0) {
-        $('.section-5').fadeIn(500);
+        $('.section-5').fadeIn(800, function() {
+            $(".film-area5").fadeIn(800);
+        });
     } else {
         $('.section-5').fadeOut(500);
+        $(".film-area5").fadeOut(500);
     }
     if (section6Top <= 0) {
-        $('.section-6').fadeIn(500);
+        $('.section-6').fadeIn(800, function() {
+            $(".film-area6").fadeIn(800);
+        });
     } else {
         $('.section-6').fadeOut(500);
+        $(".film-area6").fadeOut(500);
     }
     if (section7Top <= 0) {
         $('.section-7').fadeIn(500);

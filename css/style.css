@@ -1,10 +1,10 @@
 @charset "utf-8";
 
 /* ************** font ************ */
-@import url('https://webfontworld.github.io/pretendard/Pretendard.css');
+/*@import url('https://webfontworld.github.io/pretendard/Pretendard.css');*/
 /*font-family: 'Pretendard';*/
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');*/
 /*font-family: "Poppins", sans-serif;*/
 
 
@@ -17,12 +17,14 @@ html {
 body { 
     scroll-behavior: smooth;
 	margin:0; padding:0; 
-	font-family: 'Pretendard', sans-serif;
+	font-family: "Noto Serif KR", serif;
+    font-optical-sizing: auto;
 	box-sizing: border-box;
     overflow-x: hidden;
     background-color: #f7f5f0;
     word-break: keep-all;
     overflow-x: hidden;
+    line-height: 24px;
 }
 @media only screen and (max-width: 720px) {
     body { 
@@ -124,7 +126,7 @@ div.origin-wrapper div.section-6 {
 }
 div.origin-wrapper div.section-7 {
     z-index: 7;
-    background: rgb(65, 65, 65);
+    background: #262827;
 }
 
 div.overlay {
@@ -137,7 +139,6 @@ div.overlay {
 div.overlay div.areas {
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid #000;
 }
 
 /* area 1 */
@@ -155,13 +156,6 @@ div.overlay div.area-1 div.inner-content .sentence {
 }
 div.overlay div.area-1 div.inner-content div.book-now {
 
-}
-div.overlay div.area-1 div.inner-content div.book-now a {
-    display: inline-block;
-    color: #fff;
-    padding: 20px 70px 20px 0;
-    background: url('../img/arrow.png') 90% 55% no-repeat;
-    margin: 60px 0;
 }
 .reserve-info {
 
@@ -191,6 +185,17 @@ div.overlay div.area-1 div.inner-content div.book-now a {
 .reserve-info .info-list li div.detail.on {
     
 }
+div.overlay div.area-1 div.inner-content a.mailme {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 7px 15px;
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 60px;
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+}
 
 /* area 2 */
 div.overlay div.area-2 {
@@ -212,6 +217,9 @@ div.overlay div.area-2 div.inner span {
     transform: translate(-50%, -50%);
     font-size: 25px;
     color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 34px;
 }
 div.overlay div.area-2 div.inner-content {
     padding: 80vh 30px;
@@ -221,16 +229,6 @@ div.overlay div.area-2 div.inner-content {
 }
 div.overlay div.area-2 div.inner-content .sentence {
 
-}
-div.overlay div.area-2 div.inner-content div.more-now {
-
-}
-div.overlay div.area-2 div.inner-content div.more-now a {
-    display: inline-block;
-    color: #fff;
-    padding: 20px 70px 20px 0;
-    background: url('../img/arrow.png') 90% 55% no-repeat;
-    margin: 60px 0;
 }
 
 /* area 3 */
@@ -251,6 +249,9 @@ div.overlay div.area-3 div.inner span {
     transform: translate(-50%, -50%);
     font-size: 25px;
     color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 34px;
 }
 div.overlay div.area-3 div.inner-content {
     padding: 80vh 30px;
@@ -260,16 +261,6 @@ div.overlay div.area-3 div.inner-content {
 }
 div.overlay div.area-3 div.inner-content .sentence {
 
-}
-div.overlay div.area-3 div.inner-content div.more-now {
-
-}
-div.overlay div.area-3 div.inner-content div.more-now a {
-    display: inline-block;
-    color: #fff;
-    padding: 20px 70px 20px 0;
-    background: url('../img/arrow.png') 90% 55% no-repeat;
-    margin: 60px 0;
 }
 
 /* area 4 */
@@ -291,6 +282,9 @@ div.overlay div.area-4 div.inner span {
     transform: translate(-50%, -50%);
     font-size: 25px;
     color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 34px;
 }
 div.overlay div.area-4 div.inner-content {
     padding: 80vh 30px;
@@ -300,16 +294,6 @@ div.overlay div.area-4 div.inner-content {
 }
 div.overlay div.area-4 div.inner-content .sentence {
 
-}
-div.overlay div.area-4 div.inner-content div.more-now {
-
-}
-div.overlay div.area-4 div.inner-content div.more-now a {
-    display: inline-block;
-    color: #fff;
-    padding: 20px 70px 20px 0;
-    background: url('../img/arrow.png') 90% 55% no-repeat;
-    margin: 60px 0;
 }
 
 /* area 5 */
@@ -330,6 +314,9 @@ div.overlay div.area-5 div.inner span {
     transform: translate(-50%, -50%);
     font-size: 25px;
     color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 34px;
 }
 div.overlay div.area-5 div.inner-content {
     padding: 80vh 30px;
@@ -339,60 +326,91 @@ div.overlay div.area-5 div.inner-content {
 }
 div.overlay div.area-5 div.inner-content .sentence {
 
-}
-div.overlay div.area-5 div.inner-content div.more-now {
-
-}
-div.overlay div.area-5 div.inner-content div.more-now a {
-    display: inline-block;
-    color: #fff;
-    padding: 20px 70px 20px 0;
-    background: url('../img/arrow.png') 90% 55% no-repeat;
-    margin: 60px 0;
 }
 
 /* area 6 */
 div.overlay div.area-6 {
     
 }
-div.overlay div.area-5 div.inner {
+div.overlay div.area-6 div.inner {
     position: relative;
     width: 100%;
     height: 100vh;
 }
-div.overlay div.area-5 div.inner.on {
+div.overlay div.area-6 div.inner.on {
     background: none;
 }
-div.overlay div.area-5 div.inner span {
+div.overlay div.area-6 div.inner span {
     position: absolute;
     left: 50%; top: 50%;
     transform: translate(-50%, -50%);
     font-size: 25px;
     color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 34px;
 }
-div.overlay div.area-5 div.inner-content {
+div.overlay div.area-6 div.inner-content {
     padding: 80vh 30px;
     color: #fff;
     z-index: 20;
     text-align: left;
 }
-div.overlay div.area-5 div.inner-content .sentence {
+div.overlay div.area-6 div.inner-content .sentence {
 
-}
-div.overlay div.area-5 div.inner-content div.more-now {
-
-}
-div.overlay div.area-5 div.inner-content div.more-now a {
-    display: inline-block;
-    color: #fff;
-    padding: 20px 70px 20px 0;
-    background: url('../img/arrow.png') 90% 55% no-repeat;
-    margin: 60px 0;
 }
 
 /* area 7 */
 div.overlay div.area-7 {
-    height: 1600px;
+    background: #262827;
+}
+div.overlay div.area-7 div.footer {
+    padding: 80px 30px;
+    background: #000;
+    color: #fff;
+    text-align: left;
+    font-size: 15px;
+    line-height: 30px;
+}
+div.overlay div.area-7 div.footer a {
+    color: #fff;
+}
+div.overlay div.area-7 div.footer span.logo {
+    display: block;
+    padding-bottom: 30px;
+}
+div.overlay div.area-7 div.footer span.logo img {
+    width: 180px;
+}
+div.overlay div.area-7 div.agreement {
+    font-size: 10px;
+    padding: 25px 0;
+}
+div.overlay div.area-7 div.agreement span {
+    margin: 0 7px;
+}
+div.overlay div.area-7 p.copyright {
+    font-size: 10px;
+    line-height: 18px;
+}
+div.overlay div.area-7 div.sns {
+    padding-top: 20px;
+}
+div.overlay div.area-7 div.sns a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    text-indent: -9999px;
+}
+div.overlay div.area-7 div.sns a.instagram {
+    background: url('../img/footer_insta_logo.png') 50% 50% no-repeat;
+}
+div.overlay div.area-7 div.sns a.facebook {
+    background: url('../img/footer_facebook_logo.png') 50% 50% no-repeat;
+}
+div.overlay div.area-7 div.sns a.google {
+    background: url('../img/footer_google_logo.png') 50% 50% no-repeat;
 }
 
 div.film-area1 {
@@ -450,9 +468,37 @@ div.scene-4 {
     object-fit: cover;
 }
 
-/* global */
-div.film-area2 {
+/* sub content */
+div.subcontent {
     position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0; top: 0;
+    z-index: 11;
+    background: red;
+}
+div.subcontent ul {
+    position: absolute;
+    left: 10%;
+    bottom: 15%;
+    z-index: 1;
+}
+div.subcontent ul li {
+    font-size: 25px;
+    color: #fff;
+    margin: 0 0 20px 0;
+    padding: 0 0 5px 0;
+}
+div.subcontent ul li.underline {
+    border-bottom: 1px solid #fff;
+
+}
+
+
+/* global */
+div.film-area2, div.film-area3, div.film-area4, div.film-area5, div.film-area6 {
+    /*position: fixed;*/
+    position: absolute;
     background: #000;
     width: 100%;
     height: 100%;
@@ -502,7 +548,7 @@ a.menu-close {
     top: 50px;
     right: 7%;
     z-index: 15;
-    background: url('../img/GNB_menu_btn.png') 50% 50% no-repeat;
+    background: url('../img/btn_close.png') 50% 50% no-repeat;
     text-indent: -9999px;
 }
 div.gnb-wrapper {
@@ -525,6 +571,8 @@ div.language {
     z-index: 10;
     color: #fff;
     font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
 }
 div.language a {
     color: #fff;
@@ -543,4 +591,35 @@ div.global-menus a {
     display: block;
     color: #fff;
     padding: 12px 0;
+}
+div.inner-content div.more-now a {
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    color: #fff;
+    padding: 20px 70px 20px 0;
+    background: url('../img/arrow.png') 90% 50% no-repeat;
+    margin: 100px 0;
+}
+div.go-back {
+    position: absolute;
+    left: 7%;
+    top: 50px;
+    z-index: 2;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    color: #fff;
+    padding: 20px 0px 20px 70px;
+    background: url('../img/arrow_back.png') 0% 50% no-repeat;
+    margin: 100px 0;
+}
+div.go-back a {
+    color: #fff;
+}
+p.semi-title {
+    font-size: 25px;
+    padding-bottom: 50px;
+    line-height: 34px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
 }
