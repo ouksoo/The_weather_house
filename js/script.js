@@ -166,8 +166,11 @@ window.addEventListener('scroll', function() {
         $(".film-area2").fadeOut(500);
     }
     if (section3Top <= 0) {
+        
         $('.section-3').fadeIn(800, function() {
-            $(".film-area3").fadeIn(800);
+            $(".film-area3").fadeIn(800, function() {
+                //$('body').css('overflow', 'auto');
+            });
         });
     } else {
         $('.section-3').fadeOut(500);
